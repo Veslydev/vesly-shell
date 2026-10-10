@@ -1,0 +1,24 @@
+# Vesly Cloud Labs | mobile / Termius / narrow Warp
+add_newline = false
+scan_timeout = 25
+command_timeout = 600
+format = "$hostname$directory$git_branch$character"
+
+[hostname]
+ssh_only = false
+style = "bold #D19CFF"
+format = "[$hostname]($style)"
+
+[directory]
+style = "#b6a1db"
+truncation_length = 1
+truncate_to_repo = true
+format = "[ $path]($style)"
+
+[git_branch]
+style = "bold #7D42F6"
+format = "[ · $branch]($style)"
+
+[character]
+success_symbol = "[ ❯](bold #7D42F6) "
+error_symbol = "[ ❯](bold #D19CFF) "

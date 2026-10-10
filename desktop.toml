@@ -1,0 +1,39 @@
+# Vesly Cloud Labs | desktop (90+ columns)
+add_newline = false
+scan_timeout = 25
+command_timeout = 600
+format = "$username$hostname$directory$git_branch$git_status$cmd_duration$line_break$character"
+
+[username]
+show_always = true
+style_user = "bold #D19CFF"
+style_root = "bold #D19CFF"
+format = "[╭─ $user]($style)"
+
+[hostname]
+ssh_only = false
+style = "bold #D19CFF"
+format = "[@$hostname]($style)"
+
+[directory]
+style = "#b6a1db"
+truncation_length = 3
+truncate_to_repo = true
+format = "[ $path]($style)"
+
+[git_branch]
+style = "bold #7D42F6"
+format = "[ · $branch]($style)"
+
+[git_status]
+style = "bold #D19CFF"
+format = "[$all_status$ahead_behind]($style)"
+
+[cmd_duration]
+min_time = 1200
+style = "#8d82a1"
+format = "[ · $duration]($style)"
+
+[character]
+success_symbol = "[╰─❯](bold #7D42F6) "
+error_symbol = "[╰─❯](bold #D19CFF) "
